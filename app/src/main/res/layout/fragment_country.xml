@@ -18,6 +18,7 @@
             android:src="@drawable/ic_launcher_background"/>
 
         <TextView
+            android:id="@+id/countryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Country Name"
@@ -25,21 +26,25 @@
             android:textStyle="bold"
             style="@style/countryTexts"/>
         <TextView
+            android:id="@+id/countryCapital"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Country Capital"
             style="@style/countryTexts"/>
         <TextView
+            android:id="@+id/countryRegion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Country Region"
             style="@style/countryTexts"/>
         <TextView
+            android:id="@+id/countryCurrency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Country Currency"
             style="@style/countryTexts"/>
         <TextView
+            android:id="@+id/countryLanguage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Country Language"
