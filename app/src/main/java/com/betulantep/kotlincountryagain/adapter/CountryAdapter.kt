@@ -7,6 +7,8 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.betulantep.kotlincountryagain.databinding.CountryRowBinding
 import com.betulantep.kotlincountryagain.model.Country
+import com.betulantep.kotlincountryagain.util.downloadFromUrl
+import com.betulantep.kotlincountryagain.util.placeholderProgressBar
 import com.betulantep.kotlincountryagain.view.FeedFragmentDirections
 
 class CountryAdapter(val countryList : ArrayList<Country>) : RecyclerView.Adapter<CountryAdapter.CountryViewHolder>(){
@@ -26,6 +28,9 @@ class CountryAdapter(val countryList : ArrayList<Country>) : RecyclerView.Adapte
         holder.countryRowBinding.root.setOnClickListener {
             Navigation.findNavController(it).navigate(FeedFragmentDirections.actionFeedFragmentToCountryFragment())
         }
+
+        holder.countryRowBinding.image.downloadFromUrl(countryList[position].countryImageUrl,
+            placeholderProgressBar(holder.countryRowBinding.root.context))
     }
 
     override fun getItemCount(): Int {

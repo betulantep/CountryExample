@@ -38,6 +38,15 @@ class FeedFragment : Fragment() {
         viewModel.refreshData()
         binding.countryList.adapter = countryAdapter
 
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            binding.apply {
+                countryError.visibility = View.GONE
+                countryLoading.visibility = View.VISIBLE
+                countryList.visibility = View.GONE
+                viewModel.refreshData()
+                swipeRefreshLayout.isRefreshing = false
+            }
+        }
         observableLiveData()
     }
 
