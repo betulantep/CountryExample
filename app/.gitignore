@@ -1,2 +1,2 @@
 /build
-com/betulantep/kotlincountryagain/util/Util.kt
+app/src/main/java/com/betulantep/kotlincountryagain/util/Util.kt
