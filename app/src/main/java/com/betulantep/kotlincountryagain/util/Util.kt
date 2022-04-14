@@ -26,3 +26,7 @@ fun placeholderProgressBar(context : Context) : CircularProgressDrawable {
         start()
     }
 }
+
+fun work(){
+
+}
